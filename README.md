@@ -1,12 +1,54 @@
-# React + Vite
+📌 PrimeConsult - Project Management Experts
+PrimeConsult is a modern, responsive single-page application (SPA) built using React and vanilla CSS. It serves as a professional landing page for a project management consultancy, showcasing its services and enabling clients to easily learn more or get in touch.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+✅ Responsive and mobile-friendly layout
+✅ Fixed navigation with smooth scroll
+✅ Hero section with clear CTA
+✅ Informative About and Services sections
+✅ Clean and structured Contact form (non-functional placeholder)
+✅ Footer with branding
+✅ No external UI libraries (e.g. no TailwindCSS, no Bootstrap)
+✅ No backend or email functionality included
 
-Currently, two official plugins are available:
+🛠️ Tech Stack
+Frontend: React (Vite)
+Styling: Custom CSS (no framework)
+Routing: None (single-page scrolling layout)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📁 Project Structure
 
-## Expanding the ESLint configuration
+primeconsult/
+├── public
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Services.jsx
+│   │   ├── Contact.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+└── vite.config.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+▶️ Getting Started
+1. Clone the repository
+git clone https://github.com/your-username/primeconsult.git
+cd primeconsult
+2. Install dependencies
+npm install
+3. Start the development server
+npm run dev
+Then open http://localhost:5173 in your browser.
+
+
+💡 Future Enhancements
+Integrate form handling with EmailJS, Formspree, or backend API
+Add routing for a multi-page experience
+Add animations or scroll-based effects
+Connect CMS or database for dynamic service/content rendering
+
