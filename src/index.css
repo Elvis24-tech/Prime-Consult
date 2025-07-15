@@ -13,52 +13,99 @@ nav {
   width: 100%;
   top: 0;
   z-index: 10;
-  height: 60px; 
-  padding: 0 20px;
+  height: 60px;
+  padding: 0 15px; /* Reduced padding to give more space */
   display: flex;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
 }
 
 nav div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  max-width: 1200px; /* Constrain width for larger screens */
   width: 100%;
+  margin: 0 auto; /* Center the content */
 }
 
 nav h1 {
   font-size: 20px;
   margin: 0;
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 16px; /* Reduced gap for tighter spacing */
   margin: 0;
   padding: 0;
+  flex-grow: 1; /* Allow ul to take available space */
+  justify-content: flex-end; /* Push links to the right */
+  overflow: hidden; /* Prevent overflow issues */
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px; /* Slightly smaller font to fit all text */
+  padding: 8px 10px; /* Reduced padding for better fit */
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: text-decoration 0.3s;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  nav div {
+    justify-content: space-between; /* Balanced layout for mobile */
+  }
+
+  nav ul {
+    gap: 12px; /* Tighter gap for mobile */
+    justify-content: center; /* Center links for better visibility */
+  }
+
+  nav a {
+    font-size: 12px; /* Smaller font to prevent cut-off */
+    padding: 6px 8px; /* Tighter padding */
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 10px; /* Further reduce padding */
+  }
+
+  nav h1 {
+    font-size: 16px; /* Smaller logo for very small screens */
+  }
+
+  nav ul {
+    gap: 8px; /* Minimal gap for small screens */
+    flex-wrap: nowrap; /* Prevent wrapping, but ensure visibility */
+  }
+
+  nav a {
+    font-size: 11px; /* Smallest font to fit all links */
+    padding: 4px 6px; /* Minimal padding */
+  }
+}
+
+/* Rest of your CSS remains unchanged */
 section {
-  padding: 80px 20px; 
+  padding: 80px 20px;
 }
 
 .hero {
-  padding-top: 100px; 
+  padding-top: 100px;
   padding-bottom: 100px;
-  min-height: calc(100vh - 60px); 
+  min-height: calc(100vh - 60px);
   background: linear-gradient(to right, #3b82f6, #1e3a8a);
   color: white;
   display: flex;
@@ -114,6 +161,7 @@ textarea:focus {
   border-color: #3b82f6;
   box-shadow: 0 0 4px rgba(59, 130, 246, 0.5);
 }
+
 .text-center {
   text-align: center;
 }
